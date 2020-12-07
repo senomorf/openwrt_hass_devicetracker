@@ -9,5 +9,5 @@ COPY packages/net/hass-tracker /home/openwrt/sdk/feeds/packages/net/hass-tracker
 # initial build to cache compilation of other packages
 RUN ./scripts/feeds update -i && ./scripts/feeds install hass-tracker && make package/hass-tracker/compile -j3
 
-CMD make package/hass-tracker/compile -j3
+CMD make package/hass-tracker/compile -j3; make package/index
 
